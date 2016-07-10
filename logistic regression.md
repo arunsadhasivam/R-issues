@@ -9,7 +9,7 @@ Solution:
 =========
 set maxit =100 to get convergence.
 logresult <- glm(Loan_Status~. -Loan_ID, data=train, family=binomial,maxit =100)
-
+it works well !!!
 
 ERROR 2:
 ========
@@ -87,4 +87,4 @@ logresult <- glm(Loan_Status~., data=train[,!colnames(train) %in% c("Loan_ID")],
 logresult <- glm(Loan_Status~., data=train[,!colnames(train) %in% c("Loan_ID")], family=binomial,maxit =100)#working.
 pred=predict(logresult,test ,type="response")
 test$Loan_Status=pred
-
+it works well!!!
